@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2">
+  <Program name="mainCalcToolpp" access="public">
+    <Parameters xmlns="http://www.staubli.com/robotics/VAL3/Param/1">
+      <Parameter name="x_sLanguage" type="string" xsi:type="element" />
+      <Parameter name="x_tOutil" type="tool" xsi:type="array" use="reference" />
+    </Parameters>
+    <Locals>
+      <Local name="l_nLongPointe" type="num" xsi:type="array" size="1" />
+      <Local name="l_pHere" type="point" xsi:type="array" size="1" />
+      <Local name="l_pRef" type="point" xsi:type="array" size="1" />
+      <Local name="l_trResultat" type="trsf" xsi:type="array" size="1" />
+      <Local name="l_nTouche" type="num" xsi:type="array" size="1" />
+      <Local name="l_nLanguage" type="num" xsi:type="array" size="1" />
+      <Local name="l_tPointe" type="tool" xsi:type="array" size="1" />
+    </Locals>
+    <Code><![CDATA[begin
+  //-----------------------------------------------------------------------
+  //Header begin
+  //Description of program
+  //  This program creates a tool using the pointer/counter pointer method
+  //  A wizard will guide you through the steps
+  //
+  //Input parameters
+  //  string x_sLanguage :
+  //    role : defines the language GUI (Graphical User Interface) messages
+  //
+  //Output parameters
+  //  tool& x_tOutil :
+  //    role : calculated TCP (X, Y, Z, Rx, Ry, Rz)
+  //
+  //Example
+  //  mainCalcToolpp(tPince,"French")
+  //
+  //History
+  //  Creation : 08-04-08 - f.Rob
+  //Header end
+  //-----------------------------------------------------------------------
+
+  //Initialization l_nTouche which allow to recovery keypresses
+  l_nTouche=0
+  userPage()
+  //Test if there is no error in parameter language
+  if (x_sLanguage=="English") or (x_sLanguage=="French") or (x_sLanguage=="Spanish")
+    //Initialization l_nLanguage which allow to point in array  sUsrMess
+    switch x_sLanguage
+      case "English"
+        l_nLanguage=0
+      break
+      case "French"
+        l_nLanguage=40
+      break
+      case "Spanish"
+        l_nLanguage=80
+      break
+    endSwitch
+    //Displays instructions users (depend on the language)
+    title(sUsrMess[1+l_nLanguage])
+    cls()
+    gotoxy(0,2)
+    putln(sUsrMess[2+l_nLanguage])
+    putln("")
+    putln(sUsrMess[3+l_nLanguage])
+    putln(sUsrMess[4+l_nLanguage])
+    putln(sUsrMess[5+l_nLanguage])
+    putln(sUsrMess[6+l_nLanguage])
+    putln(sUsrMess[7+l_nLanguage])
+    putln("")
+    putln(sUsrMess[8+l_nLanguage])
+    get()
+    title(sUsrMess[9+l_nLanguage])
+    l_tPointe=flange
+    //For define length of the tool pointe (just axis z)
+    do
+      cls()
+      l_nLongPointe=0
+      gotoxy(0,3)
+      put(sUsrMess[10+l_nLanguage])
+      get(l_nLongPointe)
+    until (l_nLongPointe>=0)
+    l_tPointe.trsf={0,0,l_nLongPointe,0,0,0}
+    //Displays instructions users (depend on the language)
+    cls()
+    gotoxy(0,3)
+    putln(sUsrMess[11+l_nLanguage])
+    putln(sUsrMess[12+l_nLanguage])
+    putln("")
+    putln(sUsrMess[13+l_nLanguage])
+    putln(sUsrMess[14+l_nLanguage])
+    //Waiting press enter to continue
+    do
+      l_nTouche=get()
+    until (l_nTouche==270)
+    //defines the reference point (on the counter-pointe)
+    l_pRef=here(l_tPointe,world)
+    cls()
+    title(sUsrMess[15+l_nLanguage])
+    gotoxy(0,3)
+    putln(sUsrMess[16+l_nLanguage])
+    putln(sUsrMess[4+l_nLanguage])
+    do
+      putln(sUsrMess[17+l_nLanguage])
+      putln("")
+      putln(sUsrMess[13+l_nLanguage])
+      putln(sUsrMess[14+l_nLanguage])
+      //Waiting press enter to continue
+      do
+        l_nTouche=get()
+      until (l_nTouche==270)
+      //Memorizing the reference point of your tool
+      l_pHere=here(flange,world)
+      //Creation of components of the tool
+      x_tOutil.trsf=!l_pHere.trsf*(l_pRef.trsf)
+      l_trResultat=x_tOutil.trsf
+      //Displays components of the tool
+      cls()
+      title("")
+      gotoxy(0,2)
+      putln(sUsrMess[18+l_nLanguage])
+      putln("")
+      put(sUsrMess[19+l_nLanguage])
+      putln(l_trResultat.x)
+      put(sUsrMess[20+l_nLanguage])
+      putln(l_trResultat.y)
+      put(sUsrMess[21+l_nLanguage])
+      putln(l_trResultat.z)
+      put(sUsrMess[22+l_nLanguage])
+      putln(l_trResultat.rx)
+      put(sUsrMess[23+l_nLanguage])
+      putln(l_trResultat.ry)
+      put(sUsrMess[24+l_nLanguage])
+      putln(l_trResultat.rz)
+      putln("")
+      putln(sUsrMess[13+l_nLanguage])
+      //Waiting press enter to continue
+      do
+        l_nTouche=get()
+      until (l_nTouche==270)
+      //Explications for testing tool
+      cls()
+      title(sUsrMess[25+l_nLanguage])
+      gotoxy(0,2)
+      putln(sUsrMess[26+l_nLanguage])
+      putln(sUsrMess[27+l_nLanguage])
+      putln(sUsrMess[28+l_nLanguage])
+      putln(sUsrMess[29+l_nLanguage])
+      putln("")
+      putln(sUsrMess[30+l_nLanguage])
+      putln(sUsrMess[31+l_nLanguage])
+      //If the user finds that the components are wrong
+      //he press the ESC key (Back to learning reference point)
+      l_nTouche=get()
+      if !(l_nTouche==270)
+        cls()
+        gotoxy(0,3)
+      endIf
+    until (l_nTouche==270)
+  else
+    cls()
+    title("Error")
+    gotoxy(0,4)
+    putln("Error language parameter !!!")
+    putln("Press Enter to choose the language")
+    //Waiting press enter to continue
+    do
+      l_nTouche=get()
+    until (l_nTouche==270)
+    call start()
+  endIf
+  cls()
+  gotoxy(4,20)
+  putln(sUsrMess[32+l_nLanguage])
+  delay(2)
+end]]></Code>
+  </Program>
+</Programs>

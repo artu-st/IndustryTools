@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2">
+  <Program name="language" access="public">
+    <Parameters xmlns="http://www.staubli.com/robotics/VAL3/Param/1">
+      <Parameter name="x_sLanguage" type="string" xsi:type="array" use="reference" />
+    </Parameters>
+    <Locals>
+      <Local name="l_nWhich" type="num" xsi:type="array" size="1" />
+    </Locals>
+    <Code><![CDATA[begin
+  //-----------------------------------------------------------------------
+  //Header begin
+  //Description of program
+  //  This program lets you choose the language : English, French or Spanish
+  //
+  //Input parameters
+  //  string x_sLanguage :
+  //    role : returns the language selected by the operator
+  //    possible values : "English", "French" or "Spanish"
+  //
+  //History
+  //  Creation : 08-04-08 - f.Rob
+  //Header end
+  //-----------------------------------------------------------------------
+
+  userPage()
+  cls()
+  title("Language")
+  gotoxy(7,10)
+  put(sUsrMess[0])
+  //Functions to display navigation keys (F1 through F8)
+  //(here F2 "Engl", F4 "Fren" and F6 "Span")
+  call usrButtonTxt(2,"Engl")
+  call usrButtonTxt(4,"Fren")
+  call usrButtonTxt(6,"Span")
+  //
+  //Waiting user choice 2 (F2) 4 (F4) or 6 (F6)
+  do
+    l_nWhich=(get()-270)
+  until ((l_nWhich==2) or (l_nWhich==4) or (l_nWhich==6))
+  //User choice : 2 (F2)=> English, 4 (F4)=> French, 6 (F6)=> Spanish
+  switch l_nWhich
+    case 2
+      x_sLanguage="English"
+    break
+    case 4
+      x_sLanguage="French"
+    break
+    case 6
+      x_sLanguage="Spanish"
+    break
+  endSwitch
+  cls()
+end]]></Code>
+  </Program>
+</Programs>

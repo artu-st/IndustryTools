@@ -1,0 +1,101 @@
+#
+# Generated backup file, do not edit.
+#
+# Originally at: /hd0a/66-30024/REST_ABB
+# 2016-03-08  04:13:54
+#
+>>SYSTEM_ID:
+66-30024
+
+>>PRODUCTS_ID:
+3HAC6811-2.18.1 0001 System Pack 4.0
+  IRB 6600/2.55-175
+  Service Info System
+  Calib. Pendelum RAPID
+  Ethernet Services
+  FactoryWare Communication
+  Advanced Functions
+  LoadId and ColDetect
+  Multitasking
+  Developer Functions
+  IO Plus
+  Screen Viewer
+  Internal Discrete Applications
+  SpotWare Servo
+APPL-RENAULT-40.41 APPL-RENAULT-40.41
+
+>>ROBOT_TYPE:
+6600/2.55-175
+
+>>HOME:
+All public files and directories
+
+>>SYSPAR:
+SYS.cfg
+SIO.cfg
+EIO.cfg
+MOC.cfg
+PROC.cfg
+MMC.cfg
+
+>>TASK0: (MAIN)
+SYSMOD/SRE_VAR.sys @ ../appl-renault-40.41/sre/baseprg/sre_var.sys
+SYSMOD/USER.sys @ user.sys
+SYSMOD/MAN_CONF.sys @ site/man_conf.sys
+SYSMOD/SWITDATA.sys @ HOME:/rest_abb/rapid/task0/sysmod/switdata.sys
+SYSMOD/SWDEFUSR.sys @ swdefusr.sys
+SYSMOD/DEF_SITE.sys @ site/def_site.sys
+SYSMOD/SWBAS.sys @ dap/swbas.sys
+SYSMOD/SRE_MVT.sys @ ../appl-renault-40.41/sre/baseprg/sre_mvt.sys
+SYSMOD/MANUT.sys @ ../appl-renault-40.41/tc/baseprg/manut.sys
+SYSMOD/GENE_VAR.sys @ ../appl-renault-40.41/tc/baseprg/gene_var.sys
+SYSMOD/PERSO.sys @ site/perso.sys
+SYSMOD/SWTIMER.sys @ ../appl-renault-40.41/sre/swit/swtimer.sys
+SYSMOD/SRE_USR.sys @ HOME:/rest_abb/rapid/task0/sysmod/sre_usr.sys
+SYSMOD/SRE_COM.sys @ ../appl-renault-40.41/sre/baseprg/sre_com.sys
+SYSMOD/MAINTENA.sys @ HOME:/rest_abb/rapid/task0/sysmod/maintena.sys
+SYSMOD/MAN_SURV.sys @ ../appl-renault-40.41/tc/baseprg/man_surv.sys
+SYSMOD/SWDEFINE.sys @ ../appl-renault-40.41/sre/swit/swdefine.sys
+SYSMOD/REFCAL.sys @ refcal/refcal.sys
+SYSMOD/PRG_BIB.sys @ ../appl-renault-40.41/tc/baseprg/prg_bib.sys
+PROGMOD/PRG_MVT.mod @ HOME:/rest_abb/rapid/task0/progmod/prg_mvt.mod
+
+>>TASK1: (DA_PROC1)
+SYSMOD/SRE_VAR.sys @ ../appl-renault-40.41/sre/baseprg/sre_var.sys
+SYSMOD/SWITDATA.sys @ HOME:/rest_abb/rapid/task1/sysmod/switdata.sys
+SYSMOD/SWDEFUSR.sys @ swdefusr.sys
+SYSMOD/DEF_SITE.sys @ site/def_site.sys
+SYSMOD/SWPRC.sys @ dap/swprc.sys
+SYSMOD/GENE_VAR.sys @ ../appl-renault-40.41/tc/baseprg/gene_var.sys
+SYSMOD/SRE_USR.sys @ HOME:/rest_abb/rapid/task1/sysmod/sre_usr.sys
+
+>>TASK2: (SW_SUP)
+SYSMOD/SRE_VAR.sys @ ../appl-renault-40.41/sre/baseprg/sre_var.sys
+SYSMOD/SRE_ECF.sys @ ../appl-renault-40.41/sre/baseprg/sre_ecf.sys
+SYSMOD/SWITDATA.sys @ switdata.sys
+SYSMOD/SRE_ACT.sys @ ../appl-renault-40.41/sre/baseprg/sre_act.sys
+SYSMOD/SWDEFUSR.sys @ swdefusr.sys
+SYSMOD/DEF_SITE.sys @ site/def_site.sys
+SYSMOD/GENE_VAR.sys @ ../appl-renault-40.41/tc/baseprg/gene_var.sys
+SYSMOD/SRE_USR.sys @ HOME:/rest_abb/rapid/task2/sysmod/sre_usr.sys
+PROGMOD/SRE_SUP.mod @ ../appl-renault-40.41/sre/baseprg/sre_sup.mod
+
+>>TASK6: (SWIT_BG)
+PROGMOD/SWIT_BG.mod @ ../appl-renault-40.41/sre/swit/swit_bg.mod
+SYSMOD/SWITDATA.sys @ HOME:/rest_abb/rapid/task6/sysmod/switdata.sys
+
+>>TASK9: (SURVEIL)
+SYSMOD/SRE_VAR.sys @ ../appl-renault-40.41/sre/baseprg/sre_var.sys
+SYSMOD/MAN_CONF.sys @ site/man_conf.sys
+SYSMOD/SWITDATA.sys @ HOME:/rest_abb/rapid/task9/sysmod/switdata.sys
+SYSMOD/DEF_SITE.sys @ site/def_site.sys
+PROGMOD/SURVEIL.mod @ ../appl-renault-40.41/tc/baseprg/surveil.mod
+SYSMOD/SUIVICOM.sys @ ../appl-renault-40.41/tc/baseprg/suivicom.sys
+SYSMOD/GENE_VAR.sys @ ../appl-renault-40.41/tc/baseprg/gene_var.sys
+SYSMOD/PERSO.sys @ site/perso.sys
+SYSMOD/BASE_MT.sys @ base_mt.sys
+SYSMOD/SRE_COM.sys @ ../appl-renault-40.41/sre/baseprg/sre_com.sys
+SYSMOD/MAN_SURV.sys @ ../appl-renault-40.41/tc/baseprg/man_surv.sys
+
+
+>>EOF:

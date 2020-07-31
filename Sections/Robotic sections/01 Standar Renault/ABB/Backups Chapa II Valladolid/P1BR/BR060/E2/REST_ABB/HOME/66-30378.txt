@@ -1,0 +1,15 @@
+--- Home Reference Position ---
+Created: 2005-07-01 02:54:58
+ 
+[SerialNo]
+66-30378
+[Axis1Pos]
+7.34832E-05
+[BaseRefA]
+-0.214286
+[BaseRefB]
+0.0937932
+[HomeRefA]
+0.0403362
+[HomeRefB]
+0.107945

@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2">
+  <Program name="readme">
+    <Code><![CDATA[begin
+  //Title: Calculates a tool transformation
+  //
+  //General description :
+  //  This library calculates a tool transformation using the pointer/counter
+  //  pointer method.
+  //  1) Teach a reference point with an accurate tool. (calibrated pointer)
+  //  2) Mount the tool and move the TCP (Tool center point) to the reference point
+  //  The 6 components of the tool are calculated
+  //
+  //Hardware required :
+  //  - Robot system    : any Staubli robot
+  //  - Peripherals     : no peripherals required
+  //
+  //VAL3 options :
+  //  - VAL3 version    : 7.3
+  //  - VAL3 licenses   : no licenses required
+  //  - VAL3 add-ons    : none
+  //
+  //Library version     : 7.3.1.0
+  //
+  //Public variables    : none
+  //
+  //Included libraries  : none
+  //
+  //Miscellaneous       : switched to version 7, IO library removed, no other modification - T.Caille 04/2012
+  //
+  //Keywords            : calculates, calcul, tool, outil, reference point, point de reference, components, composantes, pointer, pointe, counter pointer, contre pointe
+
+
+end]]></Code>
+  </Program>
+</Programs>

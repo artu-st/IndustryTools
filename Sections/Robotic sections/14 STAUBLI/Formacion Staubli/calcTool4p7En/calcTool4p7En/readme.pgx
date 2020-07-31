@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Programs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.staubli.com/robotics/VAL3/Program/2">
+  <Program name="readme">
+    <Code><![CDATA[begin
+  //Title: Calculates a tool transformation
+  //
+  //General description :
+  //  This library calculates a tool transformation
+  //  without the need to a teach reference point.
+  //  Jog robot to a single location with 4 different orientations
+  //  with the tool you want to teach mounted on the robot.
+  //  Select tool "flange" when teaching the points.
+  //  Caution : Defines only the X, Y, Z components of the TCP's trsf
+  //
+  //Hardware required :
+  //  - Robot system    : any 6 axis Staubli robot
+  //  - Peripherals     : no peripherals required
+  //
+  //VAL3 options :
+  //  - VAL3 version    : 7.3
+  //  - VAL3 licenses   : no licenses required
+  //  - VAL3 add-ons    : none
+  //
+  //Library version     : 7.3.1.0
+  //
+  //Public variables    : none
+  //
+  //Included libraries  : none
+  //
+  //Miscellaneous       : switched to version 7, IO library removed, no other modification - T.Caille 04/2012
+  //
+  //Keywords            : calculates, calcul, tool, outil, 4 different orientations, 4 orientations differentes, point, components, composantes
+end]]></Code>
+  </Program>
+</Programs>
